@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ulik_coursewok", "Ulik_coursewok.csproj", "{1A879C00-1748-4C02-ABBB-AD7D1C0AF782}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A879C00-1748-4C02-ABBB-AD7D1C0AF782}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A879C00-1748-4C02-ABBB-AD7D1C0AF782}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A879C00-1748-4C02-ABBB-AD7D1C0AF782}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A879C00-1748-4C02-ABBB-AD7D1C0AF782}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {255A378C-9024-4953-A1CC-22D2C9DDBC34}
+	EndGlobalSection
+EndGlobal
