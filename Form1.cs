@@ -9,6 +9,12 @@ namespace Ulik_coursewok
     {
         SldWorks SwApp;
         ModelDoc2 swModel;
+        Point[] points = new Point[] { new Point(0,0,0),
+                                       new Point(0, 0.18, 0),
+                                       new Point(-0.25, 0.18, 0),
+                                       new Point(-0.25, 0.18, 0.4),
+                                       new Point(0, 0.18, 0.4),
+                                       new Point(0, 0, 0.4)};
 
         public Form1()
         {
@@ -32,11 +38,11 @@ namespace Ulik_coursewok
             }
             swModel = SwApp.IActiveDoc2;
             swModel.SketchManager.Insert3DSketch(true);
-            swModel.SketchManager.CreateLine(0, 0, 0, 0, 0.180, 0);
-            swModel.SketchManager.CreateLine(0, 0.180, 0, -0.25, 0.18, 0);
-            swModel.SketchManager.CreateLine(-0.25, 0.18, 0, -0.25, 0.18, 0.4);
-            swModel.SketchManager.CreateLine(-0.25, 0.18, 0.4, 0, 0.18, 0.4);
-            swModel.SketchManager.CreateLine(0, 0.18, 0.4, 0, 0, 0.4);
+            for(int i = 0; i < points.Length-1; i++)
+            {
+                swModel.SketchManager.CreateLine(points[i].x, points[i].y, points[i].z, points[i+1].x, points[i+1].y, points[i+1].z);
+            }
+            
             swModel.Extension.SelectByID2("Line1", "SKETCHSEGMENT", 0, 0, 0, false, 0, null, 0);
             swModel.Extension.SelectByID2("Line2", "SKETCHSEGMENT", 0, 0, 0, true, 0, null, 0);
             swModel.SketchManager.CreateFillet(0.01, 1);
@@ -56,9 +62,8 @@ namespace Ulik_coursewok
             swModel.ClearSelection2(true);
             swModel.SketchManager.InsertSketch(true);
 
-            swModel.Extension.SelectByID2("Top", "PLANE", 0, 0, 0, false, 0, null, 0);
+            swModel.Extension.SelectByID2("Сверху", "PLANE", 0, 0, 0, false, 0, null, 0);
             swModel.SketchManager.InsertSketch(true);
-            swModel.ClearSelection2(true);
             swModel.SketchManager.CreateCenterRectangle(0, 0, 0, 0.006,0.009,0);
 
             swModel.ClearSelection2(true);
